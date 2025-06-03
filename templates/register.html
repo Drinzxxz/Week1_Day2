@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+
+<div class="d-flex justify-content-start align-items-center" style="height: 100vh; padding-left: 50px;">
+<div class="card p-4 shadow-sm" style="width: 400px;">
+<form action="/register" method="post" enctype="multipart/form-data">
+
+      <div class="mb-3 row align-items-center">
+        <label for="image" class="col-4 col-form-label">Image:</label>
+        <div class="col-8">
+        <input id="image" type="file" name="image" class="form-control form-control-lg" accept="image/*" required>
+        </div>
+      </div>
+
+      <div class="mb-3 row align-items-center">
+        <label for="name" class="col-4 col-form-label">Name:</label>
+        <div class="col-8">
+        <input id="name" type="text" name="name" class="form-control form-control-lg" placeholder="" required>
+        </div>
+      </div>
+
+      <div style="height: 1.5rem;"></div> <!-- spacing -->
+
+      <div class="mb-3 row align-items-center">
+        <label for="birthday" class="col-4 col-form-label">Birthday:</label>
+        <div class="col-8">
+        <input id="birthday" type="date" name="birthday" class="form-control form-control-lg" required>
+        </div>
+      </div>
+
+      <div class="mb-3 row align-items-center">
+        <label for="address" class="col-4 col-form-label">Address:</label>
+        <div class="col-8">
+        <input id="address" type="text" name="address" class="form-control form-control-lg" required>
+        </div>
+      </div>
+
+      <div class="mb-3 row align-items-center">
+        <label for="username" class="col-4 col-form-label">Username:</label>
+        <div class="col-8">
+        <input id="username" type="text" name="username" class="form-control form-control-lg" required>
+        </div>
+      </div>
+
+      <div class="mb-3 row align-items-center">
+        <label for="password" class="col-4 col-form-label">Password:</label>
+        <div class="col-8">
+        <input id="password" type="password" name="password" class="form-control form-control-lg" required>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end">
+      <button type="submit" class="btn btn-primary btn-lg">Register</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
