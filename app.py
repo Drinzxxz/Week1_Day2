@@ -6,7 +6,7 @@ from datetime import datetime, date
 app = Flask(__name__)
 app.secret_key = 'your-secret-key'
 
-UPLOAD_FOLDER = 'static/uploads'  # Make sure this folder exists manually!
+UPLOAD_FOLDER = 'static/uploads'  
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///aldrin.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -15,7 +15,7 @@ db = SQLAlchemy(app)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(), nullable=False)  # Added name field
+    name = db.Column(db.String(), nullable=False)  
     username = db.Column(db.String(), nullable=False, unique=True)
     password = db.Column(db.String(), nullable=False)
     image_filename = db.Column(db.String(), nullable=True)
